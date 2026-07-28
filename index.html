@@ -1,123 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>Kaja's PhD — Interactive Figures</title>
 
 <style>
-    body {
-        font-family: Helvetica, Arial, sans-serif;
-        background: #ffffff;
-        color: #222;
-        margin: 0;
-        padding: 0;
-    }
 
-    .container {
-        max-width: 850px;
-        margin: 80px auto;
-        padding: 0 30px;
-        text-align: center;
-    }
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
 
-    h1 {
-        font-size: 36px;
-        font-weight: 400;
-        letter-spacing: -0.5px;
-        margin-bottom: 15px;
-    }
+.container {
+    max-width: 850px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
 
-    .subtitle {
-        font-size: 17px;
-        color: #666;
-        margin-bottom: 55px;
-    }
+h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
 
-    h2 {
-        font-size: 20px;
-        font-weight: 500;
-        margin-top: 45px;
-        margin-bottom: 20px;
-    }
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 60px;
+}
 
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
 
-    li {
-        margin: 12px 0;
-    }
+details {
+    margin: 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
 
-    a {
-        color: #1a5fb4;
-        text-decoration: none;
-        font-size: 17px;
-        transition: color 0.2s ease;
-    }
 
-    a:hover {
-        color: #0b3d91;
-        text-decoration: underline;
-    }
+summary {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 0;
+}
 
-    .footer {
-        margin-top: 80px;
-        font-size: 14px;
-        color: #888;
-    }
+
+ul {
+    list-style: none;
+    padding-left: 25px;
+}
+
+
+li {
+    margin: 12px 0;
+}
+
+
+a {
+    color: #1a5fb4;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.subsection {
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+
+.footer {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 14px;
+    color: #888;
+}
+
 </style>
 
 </head>
+
 
 <body>
 
 <div class="container">
 
-    <h1>Kaja's PhD</h1>
 
-    <div class="subtitle">
-        Interactive figures and supplementary visualisations
-    </div>
+<h1>Kaja's PhD</h1>
 
-    <h2>Introduction</h2>
-
-    <ul>
-        <li>
-            <a href="Introduction/bluewhale_4minutes.wav">
-                Genomes as sounds - Balaenoptera musculus
-            </a>
-        </li>
-    </ul>
-
-    <h2>Chapter 2</h2>
-
-    <ul>
-        <li>
-            <a href="Chapter2/3D_configtraits.html">
-                3D configurational traits
-            </a>
-        </li>
-    </ul>
+<div class="subtitle">
+Interactive figures and supplementary visualisations
+</div>
 
 
-    <h2>Discussion</h2>
+<details>
+<summary>Introduction</summary>
 
-    <ul>
-        <li>
-            <a href="Discussion/gc_content_genome_thresholds.html">
-                Homo sapiens T2T GC content
-            </a>
-        </li>
-    </ul>
+<ul>
+<li>
+<a href="Introduction/bluewhale_4minutes.wav">
+Genomes as sounds — Balaenoptera musculus
+</a>
+</li>
+</ul>
+
+</details>
 
 
-    <div class="footer">
-        Interactive figures accompanying the PhD thesis
-    </div>
+
+<details>
+<summary>Chapter 2</summary>
+
+<ul>
+<li>
+<a href="Chapter2/3D_configtraits.html">
+3D configurational traits
+</a>
+</li>
+</ul>
+
+</details>
+
+
+
+<details>
+<summary>Chapter 8</summary>
+
+
+<div class="subsection">
+
+<details>
+<summary>Progression plots</summary>
+
+<ul>
+
+<li>
+<a href="Chapter8/Progression_plots/Replicate1/">
+Replicate 1
+</a>
+</li>
+
+<li>
+<a href="Chapter8/Progression_plots/Replicate2/">
+Replicate 2
+</a>
+</li>
+
+</ul>
+
+</details>
+
+
+<details>
+<summary>Reproducibility plots</summary>
+
+<ul>
+
+<li>
+<a href="Chapter8/Reproducibility_plots/5s/">
+5s plots
+</a>
+</li>
+
+<li>
+<a href="Chapter8/Reproducibility_plots/plots.txt">
+Plot descriptions
+</a>
+</li>
+
+</ul>
+
+</details>
+
+</div>
+
+</details>
+
+
+
+<details>
+<summary>Discussion</summary>
+
+<ul>
+<li>
+<a href="Discussion/gc_content_genome_thresholds.html">
+Homo sapiens T2T GC content
+</a>
+</li>
+</ul>
+
+</details>
+
+
+
+<div class="footer">
+Interactive figures accompanying the PhD thesis
+</div>
+
 
 </div>
 
 </body>
+
 </html>
