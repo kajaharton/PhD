@@ -10,7 +10,7 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
         background: #f7f8fa;
         color: #222;
-        max-width: 850px;
+        max-width: 1000px;
         margin: 60px auto;
         padding: 0 25px;
     }
@@ -26,9 +26,17 @@
         margin-bottom: 35px;
     }
 
+    h2 {
+        margin-top: 45px;
+        font-size: 22px;
+        font-weight: 600;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+    }
+
     .plots {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
         gap: 14px;
         padding: 0;
         list-style: none;
@@ -74,60 +82,50 @@
 
 <h1>Progression plots</h1>
 <p class="subtitle">
-    BICRO358 · 10 kb resolution · Replicate 1
+    BICRO358–BICRO361 · 10 kb resolution
 </p>
 
-<ul class="plots">
+<div id="content"></div>
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr1.html">
-Chromosome 1 <span class="chr">10 kb progression plot</span>
-</a></li>
+<script>
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr2.html">
-Chromosome 2 <span class="chr">10 kb progression plot</span>
-</a></li>
+const datasets = [
+    {rep: "Replicate1", sample: "BICRO358"},
+    {rep: "Replicate2", sample: "BICRO359"},
+    {rep: "Replicate3", sample: "BICRO360"},
+    {rep: "Replicate4", sample: "BICRO361"}
+];
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr3.html">
-Chromosome 3 <span class="chr">10 kb progression plot</span>
-</a></li>
+const chromosomes = [
+    "Chr1", "Chr2", "Chr3", "Chr4", "Chr5", "Chr6",
+    "Chr7", "Chr8", "Chr9", "Chr10", "Chr11", "ChrZ"
+];
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr4.html">
-Chromosome 4 <span class="chr">10 kb progression plot</span>
-</a></li>
+const content = document.getElementById("content");
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr5.html">
-Chromosome 5 <span class="chr">10 kb progression plot</span>
-</a></li>
+datasets.forEach(dataset => {
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr6.html">
-Chromosome 6 <span class="chr">10 kb progression plot</span>
-</a></li>
+    const section = document.createElement("section");
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr7.html">
-Chromosome 7 <span class="chr">10 kb progression plot</span>
-</a></li>
+    section.innerHTML = `
+        <h2>${dataset.sample} (${dataset.rep})</h2>
+        <ul class="plots">
+            ${chromosomes.map(chr => `
+                <li>
+                    <a href="${dataset.rep}/${dataset.sample}_progression_10kb_${chr}.html">
+                        ${chr.replace("Chr", "Chromosome ")}
+                        <span class="chr">10 kb progression plot</span>
+                    </a>
+                </li>
+            `).join("")}
+        </ul>
+    `;
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr8.html">
-Chromosome 8 <span class="chr">10 kb progression plot</span>
-</a></li>
+    content.appendChild(section);
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr9.html">
-Chromosome 9 <span class="chr">10 kb progression plot</span>
-</a></li>
+});
 
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr10.html">
-Chromosome 10 <span class="chr">10 kb progression plot</span>
-</a></li>
-
-<li><a href="Replicate1/BICRO358_progression_10kb_Chr11.html">
-Chromosome 11 <span class="chr">10 kb progression plot</span>
-</a></li>
-
-<li><a href="Replicate1/BICRO358_progression_10kb_ChrZ.html">
-Chromosome Z <span class="chr">10 kb progression plot</span>
-</a></li>
-
-</ul>
+</script>
 
 </body>
 </html>
