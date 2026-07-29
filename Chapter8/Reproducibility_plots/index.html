@@ -1,23 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Reproducibility plots</title>
+
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        background: #f7f8fa;
+        color: #222;
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        color: #666;
+        margin-bottom: 35px;
+    }
+
+    h2 {
+        margin-top: 45px;
+        font-size: 22px;
+        font-weight: 600;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 8px;
+    }
+
+    .plots {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 14px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .plots li {
+        background: white;
+        border: 1px solid #e2e5e9;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+    }
+
+    .plots li:hover {
+        border-color: #9aa7b5;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .plots a {
+        display: block;
+        padding: 18px 20px;
+        color: #1a5fb4;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .plots a:hover {
+        color: #0b3d91;
+    }
+
+    .chr {
+        display: block;
+        color: #777;
+        font-size: 13px;
+        margin-top: 5px;
+        font-weight: normal;
+    }
+</style>
+
+</head>
+
+<body>
+
 <h1>Reproducibility plots</h1>
+
 <p class="subtitle">
-    Chromosome-level reproducibility analyses · 10 kb resolution
+    Fixation time series · 10 kb resolution
 </p>
 
 <div id="content"></div>
 
 <script>
-const datasets = ["5s", "30s", "2min", "60min"];
 
-const labels = {
-    "5s": "5 s fixation",
-    "30s": "30 s fixation",
-    "2min": "2 min fixation",
-    "60min": "60 min fixation"
-};
+const datasets = [
+    {time: "5s", label: "5 s"},
+    {time: "30s", label: "30 s"},
+    {time: "2min", label: "2 min"},
+    {time: "60min", label: "60 min"}
+];
 
 const chromosomes = [
-    ...Array.from({ length: 11 }, (_, i) => `Chr${i + 1}`),
-    "ChrZ"
+    "Chr1", "Chr2", "Chr3", "Chr4", "Chr5", "Chr6",
+    "Chr7", "Chr8", "Chr9", "Chr10", "Chr11", "ChrZ"
 ];
 
 const content = document.getElementById("content");
@@ -27,13 +109,16 @@ datasets.forEach(dataset => {
     const section = document.createElement("section");
 
     section.innerHTML = `
-        <h2>${labels[dataset]}</h2>
+        <h2>${dataset.label} reproducibility</h2>
+
         <ul class="plots">
             ${chromosomes.map(chr => `
                 <li>
-                    <a href="${dataset}/${dataset}_reproducibility_10kb_${chr}.html">
+                    <a href="${dataset.time}/${dataset.time}_reproducibility_10kb_${chr}.html">
                         ${chr.replace("Chr", "Chromosome ")}
-                        <span class="chr">10 kb reproducibility plot</span>
+                        <span class="chr">
+                            10 kb reproducibility plot
+                        </span>
                     </a>
                 </li>
             `).join("")}
@@ -41,5 +126,10 @@ datasets.forEach(dataset => {
     `;
 
     content.appendChild(section);
+
 });
+
 </script>
+
+</body>
+</html>
