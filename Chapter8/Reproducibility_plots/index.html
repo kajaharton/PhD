@@ -1,7 +1,19 @@
+<h1>Reproducibility plots</h1>
+<p class="subtitle">
+    Chromosome-level reproducibility analyses · 10 kb resolution
+</p>
+
 <div id="content"></div>
 
 <script>
 const datasets = ["5s", "30s", "2min", "60min"];
+
+const labels = {
+    "5s": "5 s fixation",
+    "30s": "30 s fixation",
+    "2min": "2 min fixation",
+    "60min": "60 min fixation"
+};
 
 const chromosomes = [
     ...Array.from({ length: 11 }, (_, i) => `Chr${i + 1}`),
@@ -15,7 +27,7 @@ datasets.forEach(dataset => {
     const section = document.createElement("section");
 
     section.innerHTML = `
-        <h2>${dataset}</h2>
+        <h2>${labels[dataset]}</h2>
         <ul class="plots">
             ${chromosomes.map(chr => `
                 <li>
