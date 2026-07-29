@@ -1,0 +1,41 @@
+<script>
+
+const datasets = [
+    "5s",
+    "30s",
+    "2min",
+    "60min"
+];
+
+const chromosomes = [
+    "Chr1", "Chr2", "Chr3", "Chr4", "Chr5", "Chr6",
+    "Chr7", "Chr8", "Chr9", "Chr10", "Chr11", "ChrZ"
+];
+
+const basePath = "Chapter8/Reproducibility_plots/";
+
+const content = document.getElementById("content");
+
+datasets.forEach(dataset => {
+
+    const section = document.createElement("section");
+
+    section.innerHTML = `
+        <h2>${dataset} reproducibility</h2>
+        <ul class="plots">
+            ${chromosomes.map(chr => `
+                <li>
+                    <a href="${basePath}${dataset}/${dataset}_reproducibility_10kb_${chr}.html">
+                        ${chr.replace("Chr", "Chromosome ")}
+                        <span class="chr">10 kb reproducibility plot</span>
+                    </a>
+                </li>
+            `).join("")}
+        </ul>
+    `;
+
+    content.appendChild(section);
+
+});
+
+</script>
