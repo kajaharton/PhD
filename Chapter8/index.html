@@ -6,53 +6,114 @@
 <title>Chapter 8 — Interactive Figures</title>
 
 <style>
-body {
-    font-family: Helvetica, Arial, sans-serif;
-    max-width: 850px;
-    margin: 70px auto;
-    padding: 0 30px;
-    color: #222;
-}
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        background: #f7f8fa;
+        color: #222;
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 0 25px;
+    }
 
-h1 {
-    font-weight: 400;
-}
+    .header {
+        margin-bottom: 40px;
+    }
 
-a {
-    color: #1a5fb4;
-    text-decoration: none;
-}
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    .subtitle {
+        color: #666;
+        font-size: 16px;
+    }
 
-li {
-    margin: 15px 0;
-}
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        border: 1px solid #e2e5e9;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+        overflow: hidden;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        border-color: #b7c0ca;
+    }
+
+    .card a {
+        display: block;
+        padding: 24px;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .card-title {
+        font-size: 22px;
+        font-weight: 600;
+        color: #1a5fb4;
+        margin-bottom: 8px;
+    }
+
+    .card-description {
+        color: #666;
+        line-height: 1.5;
+    }
+
+    .footer {
+        margin-top: 40px;
+        color: #888;
+        font-size: 14px;
+    }
 </style>
 
 </head>
 
 <body>
 
-<h1>Chapter 8</h1>
+<div class="header">
+    <h1>Chapter 8</h1>
+    <div class="subtitle">
+        Interactive visualizations and analysis results
+    </div>
+</div>
 
-<ul>
+<div class="cards">
 
-<li>
-<a href="Progression_plots/">
-Progression plots
-</a>
-</li>
+    <div class="card">
+        <a href="Progression_plots/">
+            <div class="card-title">Progression Plots</div>
+            <div class="card-description">
+                Chromosome-level progression analyses for all replicates at
+                10 kb resolution.
+            </div>
+        </a>
+    </div>
 
-<li>
-<a href="Reproducibility_plots/">
-Reproducibility plots
-</a>
-</li>
+    <div class="card">
+        <a href="Reproducibility_plots/">
+            <div class="card-title">Reproducibility Plots</div>
+            <div class="card-description">
+                Chromosome-level reproducibility analyses across fixation
+                conditions at 10 kb resolution.
+            </div>
+        </a>
+    </div>
 
-</ul>
+</div>
+
+<div class="footer">
+    Chapter 8 · Interactive Figures
+</div>
 
 </body>
 </html>
