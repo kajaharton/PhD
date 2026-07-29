@@ -4,87 +4,128 @@
 <head>
 <meta charset="UTF-8">
 <title>Progression plots</title>
+
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        background: #f7f8fa;
+        color: #222;
+        max-width: 850px;
+        margin: 60px auto;
+        padding: 0 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .subtitle {
+        color: #666;
+        margin-bottom: 35px;
+    }
+
+    .plots {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 14px;
+        padding: 0;
+        list-style: none;
+    }
+
+    .plots li {
+        background: white;
+        border: 1px solid #e2e5e9;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+    }
+
+    .plots li:hover {
+        border-color: #9aa7b5;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .plots a {
+        display: block;
+        padding: 18px 20px;
+        color: #1a5fb4;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .plots a:hover {
+        color: #0b3d91;
+    }
+
+    .chr {
+        display: block;
+        color: #777;
+        font-size: 13px;
+        margin-top: 5px;
+        font-weight: normal;
+    }
+</style>
+
 </head>
 
-<body style="font-family:Helvetica,Arial,sans-serif;max-width:850px;margin:70px auto;">
+<body>
 
 <h1>Progression plots</h1>
+<p class="subtitle">
+    BICRO358 · 10 kb resolution · Replicate 1
+</p>
 
-<ul>
+<ul class="plots">
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr1.html">
-BICRO358_progression_10kb_Chr1.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr1.html">
+Chromosome 1 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr2.html">
-BICRO358_progression_10kb_Chr2.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr2.html">
+Chromosome 2 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr3.html">
-BICRO358_progression_10kb_Chr3.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr3.html">
+Chromosome 3 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr4.html">
-BICRO358_progression_10kb_Chr4.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr4.html">
+Chromosome 4 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr5.html">
-BICRO358_progression_10kb_Chr5.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr5.html">
+Chromosome 5 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr6.html">
-BICRO358_progression_10kb_Chr6.html
-</a>
-</li>
-    
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr7.html">
-BICRO358_progression_10kb_Chr7.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr6.html">
+Chromosome 6 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr8.html">
-BICRO358_progression_10kb_Chr8.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr7.html">
+Chromosome 7 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr9.html">
-BICRO358_progression_10kb_Chr9.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr8.html">
+Chromosome 8 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr10.html">
-BICRO358_progression_10kb_Chr10.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr9.html">
+Chromosome 9 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_Chr11.html">
-BICRO358_progression_10kb_Chr11.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr10.html">
+Chromosome 10 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-<li>
-<a href="Replicate1/BICRO358_progression_10kb_ChrZ.html">
-BICRO358_progression_10kb_ChrZ.html
-</a>
-</li>
+<li><a href="Replicate1/BICRO358_progression_10kb_Chr11.html">
+Chromosome 11 <span class="chr">10 kb progression plot</span>
+</a></li>
 
-</ul>
+<li><a href="Replicate1/BICRO358_progression_10kb_ChrZ.html">
+Chromosome Z <span class="chr">10 kb progression plot</span>
+</a></li>
 
 </ul>
 
