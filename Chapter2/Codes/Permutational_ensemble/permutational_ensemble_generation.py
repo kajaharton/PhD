@@ -6,9 +6,9 @@ import pandas as pd
 
 # parameters
 bases = ['A', 'T', 'G', 'C']
-k = 4 # Change to the desired size
+k = 4 # Change to the desired permens alphabet size
 chunk_size = 500_000  # write in chunks to avoid memory issues
-path_nmer = '/Users/kajaharton/Desktop/paper4_genomiccontext/thermodynamics/4bp_combinations/4bp_DNA_combinations.csv'
+path_nmer = '/PATH/4bp_DNA_combinations.csv'
 
 # open CSV file for writing
 with open(path_nmer, 'w') as f:
