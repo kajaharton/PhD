@@ -1,1 +1,138 @@
-sdfasdfadsfasdfasdf
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Kaja's PhD — Chapter 2 Code</title>
+<style>
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 850px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+h1 {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+}
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 60px;
+}
+.back-link {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 15px;
+}
+details {
+    margin: 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+summary {
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+ul {
+    list-style: none;
+    padding-left: 25px;
+}
+li {
+    margin: 16px 0;
+}
+a.filename {
+    color: #1a5fb4;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Courier New", monospace;
+}
+a.filename:hover {
+    text-decoration: underline;
+}
+.desc {
+    color: #555;
+    font-size: 14.5px;
+    margin-top: 3px;
+    margin-left: 2px;
+}
+.footer {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 14px;
+    color: #888;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Chapter 2 — Code</h1>
+<div class="subtitle">
+Python scripts accompanying Chapter 2
+</div>
+<a class="back-link" href="../../index.html">&larr; Back to main page</a>
+
+<details open>
+<summary>Genome modification</summary>
+<ul>
+<li>
+<a class="filename" href="Genome_modification/bins_removal_from_fna.py">bins_removal_from_fna.py</a>
+<div class="desc">Removes rows touching mononucleotide tracks from a genome configurational-trait CSV, producing a track-free CSV.</div>
+</li>
+<li>
+<a class="filename" href="Genome_modification/loci_removal_from_fna.py">loci_removal_from_fna.py</a>
+<div class="desc">Removes predefined fragments (e.g. mononucleotide tracks) from a reference genome .fna file, given a CSV of chromosome/start/end coordinates.</div>
+</li>
+</ul>
+</details>
+
+<details open>
+<summary>Permutational ensemble</summary>
+<ul>
+<li>
+<a class="filename" href="Permutational_ensemble/permutational_ensemble_generation.py">permutational_ensemble_generation.py</a>
+<div class="desc">Generates the full permutational ensemble of all possible DNA n-mer combinations (A/T/G/C) as a CSV.</div>
+</li>
+<li>
+<a class="filename" href="Permutational_ensemble/permutational_ensemble_GCcontent_transform.py">permutational_ensemble_GCcontent_transform.py</a>
+<div class="desc">Randomly mutates a permutational ensemble of 10-mers to hit a user-defined target GC content.</div>
+</li>
+<li>
+<a class="filename" href="Permutational_ensemble/permutational_ensemble_expansion_under_constraints.py">permutational_ensemble_expansion_under_constraints.py</a>
+<div class="desc">Expands the permutational ensemble into a realistic DNA-like dataset meeting empirical constraints on GC content and A-/T-/AT-track proportions.</div>
+</li>
+</ul>
+</details>
+
+<details open>
+<summary>Scedasticity</summary>
+<ul>
+<li>
+<a class="filename" href="Scedascity/scedascity_complexity.py">scedascity_complexity.py</a>
+<div class="desc">Subsamples cumulative complexity values and averages them over multiple fragment lengths across a reference genome.</div>
+</li>
+<li>
+<a class="filename" href="Scedascity/scedascity_thermodynamics.py">scedascity_thermodynamics.py</a>
+<div class="desc">Randomly samples genomic locations and computes GC content and thermodynamic properties (dG, dH, dS) around each one.</div>
+</li>
+</ul>
+</details>
+
+<div class="footer">
+Code accompanying the PhD thesis — Chapter 2
+</div>
+</div>
+</body>
+</html>
